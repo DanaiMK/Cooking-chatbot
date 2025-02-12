@@ -1,0 +1,341 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: thanks
+  examples: |
+    - thanks
+    - thank you
+    - ty
+    - thanks a lot
+   
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: choose_search_type_dietary
+  examples: |
+    - I want to search by dietary restrictions
+    - I'd like to find recipes based on my diet
+    - Search recipes by diet
+    - Show me recipes that fit my dietary needs
+    - Find recipes that match my dietary requirements
+    - I'm looking for recipes that are suitable for my diet
+    - I need recipes tailored to my dietary restrictions
+    - Can you help me find diet-specific recipes?
+    - Find me recipes that adhere to my dietary preferences
+    - I want to browse recipes by dietary guidelines
+    - Give me recipes that comply with my diet
+    - Show me options for my dietary restrictions
+
+- intent: provide_dietary_restriction
+  examples: |
+    - I need [vegan](diet) recipes
+    - I'm looking for [vegetarian](diet) recipes
+    - Show me [gluten-free](diet) recipes
+    - I want [dairy-free](diet) options
+    - Let's try [ketogenic](diet) recipes
+    - I prefer [paleo](diet) meals
+    - Can you find me [vegan](diet) dishes?
+    - I'd like to see some [low-carb](diet) recipes
+    - Find recipes that are [vegetarian](diet) friendly
+    - I'm in the mood for some [gluten-free](diet) meals
+    - Give me [dairy-free](diet) recipe ideas
+    - I want to cook something [ketogenic](diet) tonight
+    - Show me recipes adhering to a [Mediterranean](diet) diet
+    - I'm searching for [low-fat](diet) recipes
+    - Can you suggest some [vegetarian](diet) recipes?
+    - I need [vegan](diet) meals for dinner
+    - Could you show me some [vegetarian](diet) dishes?
+    - I'm craving [gluten-free](diet) options
+    - Please provide some [dairy-free](diet) recipes
+    - I want recipes that are [ketogenic](diet) and low-carb
+    - I'm looking for [paleo](diet) meals
+    - Find me recipes that are [vegan](diet) and delicious
+    - I want to eat [vegetarian](diet) food tonight
+    - Help me find some [gluten-free](diet) meal ideas
+    - I'm interested in [dairy free](diet) recipes
+    - What are some [ketogenic](diet) recipes I can try?
+    - Show me [Mediterranean](diet) diet recipes
+    - I need some [low-carb](diet) dishes
+    - I'm searching for [vegan](diet) meal plans
+    - Can you recommend some [vegetarian](diet) recipes for lunch?
+    - I'm in the mood for [gluten-free](diet) snacks
+    - Give me some ideas for [dairy-free](diet) desserts
+    - I prefer [ketogenic](diet) food options
+    - I'm looking for [paleo](diet) dinner recipes
+    - Find me some [low-fat](diet) meal ideas
+    - Can you help me with some [Mediterranean](diet) meal recipes?
+    - I want to try a [low-carb](diet) diet, show me recipes
+    - I'm interested in [vegan](diet) breakfast recipes
+    - I need some [vegetarian](diet) lunch ideas
+
+- intent: ask_for_recipe_details
+  examples: |
+    - Yes, I'd like more details on the preparation and cooking time.
+    - Sure, tell me more about how long it takes to prepare and cook.
+    - I'd love to know the total time, including prep and cook time.
+    - Yes, please provide more info on the prep and cook time.
+    - Can you give me more details about the preparation and cooking durations?
+    - Tell me more about the time it takes to prepare and cook this recipe.
+    - I need more information about the cooking and prep time.
+    - More details about the preparation and cooking time, please.
+    - Yes, I would like more info.
+    - Yes, I'd like to know more.
+    - Yes, tell me more.
+    - I'd like more info, please.
+    - Please tell me more.
+    - Yes, please give me more details.
+
+
+- intent: stop_recipe_search
+  examples: |
+    - That's enough
+    - I'm done
+    - No more recipes, thanks
+    - That's all for now
+    - Enough recipes
+    - I've seen enough recipes
+    - I don't need any more recipes
+    - Stop, I've got plenty
+    - I have enough recipes for now
+    - That's sufficient, thanks
+    - I'm good with these recipes
+    - No more, thank you
+    - I'm satisfied with these options
+    - That's it
+    - I'm finished with recipes
+
+- intent: choose_search_type_ingredient
+  examples: |
+    - I want to search by ingredients
+    - I’d like to find recipes based on what I have
+    - I want meal ideas with my available ingredients
+    - Can I search for recipes using ingredients?
+    - Show me recipes based on what I have in my fridge
+    - I have some ingredients, what can I cook?
+    - Give me meal ideas using what I have at home
+    - Suggest dishes based on my ingredients
+    - Find me recipes with specific ingredients
+    - I want to cook with what I already have
+    - Any meal suggestions using what’s in my kitchen?
+    - I need recipes that match my ingredients
+    - What can I make with the food I have?
+    - Help me cook something with my available ingredients
+    - I want to filter recipes by ingredients
+    - Give me cooking ideas based on ingredients I mention
+    - Find meals that use certain ingredients
+    - What dishes can I make with what I have in my pantry?
+    - Help me come up with something using my ingredients
+    - I need ingredient-based recipe suggestions
+    - Show me what I can cook with limited ingredients
+    - I want to use up some ingredients, what can I make?
+    - Find me meals that include only specific ingredients
+
+- intent: provide_main_ingredient
+  examples: |
+    - I have some [tomatoes](ingredient)
+    - I have [cheese](ingredient)
+    - I want to use [spinach](ingredient)
+    - I have [carrots](ingredient)
+    - I have [onions](ingredient)
+    - I have [pork](ingredient)
+    - I have [chicken](ingredient)
+    - I have some [rice](ingredient)
+    - I want to cook with [mushrooms](ingredient)
+    - I have a lot of [garlic](ingredient)
+    - I want to use [peppers](ingredient)
+    - I have fresh [basil](ingredient)
+    - I have some [potatoes](ingredient)
+    - I have [beef](ingredient)
+    - I have [fish](ingredient)
+    - I have [eggs](ingredient)
+    - I just bought some [cabbage](ingredient)
+    - I have [zucchini](ingredient) in my fridge
+    - I want to cook with [lentils](ingredient)
+    - I have some [broccoli](ingredient)
+    - I have [cauliflower](ingredient)
+    - I need to use up these [beans](ingredient)
+    - I have a lot of [celery](ingredient)
+    - I have fresh [cilantro](ingredient)
+    - I have some leftover [salmon](ingredient)
+    - I have [tuna](ingredient)
+    - I have [shrimp](ingredient)
+    - I have [yogurt](ingredient) and want to use it
+    - I have some [butter](ingredient)
+    - I want to make something with [corn](ingredient)
+    - I have some [avocado](ingredient)
+    - I have some [cucumber](ingredient)
+    - I have [chickpeas](ingredient) for a recipe
+    - I want to use [pumpkin](ingredient)
+    - I have a few [radishes](ingredient)
+    - I have some [asparagus](ingredient)
+    - I have [bell peppers](ingredient)
+    - I want to cook something with [tofu](ingredient)
+    - I have [duck](ingredient) and need ideas
+    - I have fresh [parsley](ingredient)
+    - I have some [lemons](ingredient)
+    - I have [lime](ingredient)
+    - I want to use [coconut](ingredient)
+    - I have some [pasta](ingredient) to use
+    - I want to cook with [noodles](ingredient)
+    - I have [turkey](ingredient)
+    - I have some [bacon](ingredient)
+    - I want to use up [ground beef](ingredient)
+    - I have fresh [mint](ingredient)
+    - I have some [olives](ingredient)
+    - I have some [peanuts](ingredient)
+    - I want to use up these [walnuts](ingredient)
+    - I have [almonds](ingredient) in my pantry
+    - I have [oats](ingredient) for breakfast
+    - I have some [flour](ingredient) to bake with
+    - I have [honey](ingredient) and need ideas
+    - I want to use [brown sugar](ingredient)
+    - I have [maple syrup](ingredient)
+    - I have some [soy sauce](ingredient)
+    - I have some fresh [ginger](ingredient)
+    - I have some [vinegar](ingredient)
+    - I want to cook something with [mustard](ingredient)
+    - I have [kale](ingredient)
+    - I have fresh [rosemary](ingredient)
+    - I have [thyme](ingredient) and want to use it
+    - I have some fresh [dill](ingredient)
+    - I have [cinnamon](ingredient) in my pantry
+    - I have some [nutmeg](ingredient)
+    - I have some [cloves](ingredient)
+    - I have some fresh [bay leaves](ingredient)
+    - I have some [mango](ingredient)
+    - I have fresh [pineapple](ingredient)
+    - I want to use [strawberries](ingredient)
+    - I have some [blueberries](ingredient)
+    - I have [grapes](ingredient)
+    - I have some [pears](ingredient)
+    - I have fresh [apples](ingredient)
+    - I want to cook something with [oranges](ingredient)
+    - I have some [cherries](ingredient)
+    - I have some [watermelon](ingredient)
+    - I have [cantaloupe](ingredient)
+    - I have some [peaches](ingredient)
+    - I have [plums](ingredient)
+    - I have some [figs](ingredient)
+    - I want to use some [dates](ingredient)
+    - I have some [raisins](ingredient)
+
+
+- intent: ask_for_another_recipe
+  examples: |
+    - Show me another
+    - Do you have another one?
+    - Give me another recipe
+    - I don't like these, show me another
+    - Next recipe
+    - Can you suggest a different one?
+    - This one is not what I’m looking for, give me a new one
+    - I want to see another option
+    - I need a different recipe
+    - This is not good, show me something else
+    - Give me another option
+    - Show me a different meal
+    - What else do you have?
+    - Do you have more options?
+    - Show me another suggestion
+    - I need a new idea
+    - Show me a different recipe
+    - I don't like this one, do you have something else?
+    - Can you recommend a different recipe?
+    - That’s not what I had in mind, suggest something else
+    - Can I see more options?
+    - Do you have more recipes for this ingredient?
+    - I want to see another one
+    - Can I get another suggestion?
+    - Not interested in this, show me another recipe
+    - Can you show me something else?
+    - What other recipes do you have?
+    - Suggest something different
+    - Do you have an alternative recipe?
+    - Give me another meal idea
+    - I don’t like it, give me another one
+    - Show me more recipes
+
+- intent: ask_recipe
+  examples: |
+    - I want to cook Moussaka
+    - How do I cook Moussaka?
+    - What are the steps to prepare Moussaka?
+    - Can you tell me how to make Moussaka?
+    - How should I prepare Moussaka?
+    - Give me the recipe for Moussaka
+    - Tell me the traditional way to cook Moussaka
+    - Do you have a Moussaka recipe?
+    - Can you explain the process of making Moussaka?
+    
+
+
+- intent: ask_ingredients
+  examples: |
+    - I need the ingredients
+    - Give me the ingredients
+    - What ingredients do I need?
+    - Just the ingredients
+    - Tell me the ingredients only
+    - Can you provide the ingredients?
+    - Show me the ingredient list
+    - Tell me the ingredients without the steps
+    - Which ingredients are necessary?
+    - Give me the full ingredient breakdown
+    
+
+- intent: ask_full_recipe
+  examples: |
+    - I need the recipe
+    - I just need the recipe
+    - Give me the recipe only
+    - Just the recipe
+    - Only the recipe
+    - Can you provide the full recipe?
+    - Show me the complete recipe
+    - I want to see the whole recipe
+    - Give me all the steps for the recipe
+    - Tell me how to make it from start to finish
+    - I want the detailed recipe
+    - Show me the full cooking instructions
+    - List every step in the recipe
+    - Give me a complete breakdown of the recipe
+    - Walk me through the entire recipe
+    - I need a step-by-step guide to cook this
+    - What’s the cooking method?
+    - Tell me the process for this dish
+    - Can you give me the recipe?   

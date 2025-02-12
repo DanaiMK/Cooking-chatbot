@@ -1,0 +1,58 @@
+version: "3.1"
+
+stories:
+
+- story: search recipe by dietary restrictions part 1
+  steps:
+    - intent: choose_search_type_dietary
+    - action: utter_acknowledge_search_type_dietary
+    - intent: provide_dietary_restriction
+    - action: action_extract_dietary_restriction
+    - action: action_search_by_diet
+    - action: utter_ask_more_info
+    - checkpoint: diet_shown
+
+- story: search recipe by dietary restrictions part 2 (user wants more)
+  steps:
+    - checkpoint: diet_shown
+    - intent: ask_for_recipe_details
+    - action: action_recipe_details_diet
+
+
+#----------------------------------------------------------
+
+- story: search recipe by ingredients part 1
+  steps:
+  - intent: choose_search_type_ingredient
+  - action: utter_acknowledge_search_type_ingredients
+  - intent: provide_main_ingredient
+  - action: action_extract_ingredients
+  - action: action_search_by_ingredients
+  - action: utter_ask_enough  
+  - checkpoint: recipe_shown
+
+- story: search recipe by ingredients part 2
+  steps:
+  - checkpoint: recipe_shown
+  - intent: ask_for_another_recipe
+  - action: action_show_another_recipe
+
+#------------------------------------------------------------
+
+- story: moussaka recipe choice
+  steps:
+  - intent: ask_recipe
+  - action: utter_ask_choice
+  - checkpoint: moussaka_choice
+
+- story: moussaka ingredients branch
+  steps:
+  - checkpoint: moussaka_choice
+  - intent: ask_ingredients
+  - action: action_create_moussaka_shopping_list
+
+- story: moussaka full recipe branch
+  steps:
+  - checkpoint: moussaka_choice
+  - intent: ask_full_recipe
+  - action: action_provide_moussaka_recipe

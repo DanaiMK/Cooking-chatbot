@@ -1,0 +1,56 @@
+version: "3.1"
+
+rules:
+
+- rule: Greet and show options
+  steps:
+    - intent: greet
+    - action: utter_greet_with_options
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say thanks anytime the user says thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- rule: Stop recipe search and say goodbye
+  steps:
+    - intent: stop_recipe_search
+    - action: utter_goodbye
+
+- rule: Show another recipe
+  steps:
+    - intent: ask_for_another_recipe
+    - action: action_show_another_recipe
+
+- rule: Search recipe by dietary restrictions
+  steps:
+    - intent: provide_dietary_restriction
+    - action: action_extract_dietary_restriction
+    - action: action_search_by_diet
+    - action: utter_ask_more_info
+
+- rule: Give recipe details
+  steps:
+    - intent: ask_for_recipe_details
+    - action: action_recipe_details_diet
+
+- rule: Provide recipe
+  steps:
+    - intent: provide_main_ingredient
+    - action: action_extract_ingredients
+    - action: action_search_by_ingredients
+    - action: utter_ask_enough  
+
+
+
+

@@ -1,0 +1,94 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - bot_challenge
+  - choose_search_type_dietary
+  - provide_dietary_restriction
+  - ask_for_recipe_details
+  - stop_recipe_search
+  - choose_search_type_ingredient
+  - provide_main_ingredient
+  - ask_for_another_recipe
+  - ask_recipe
+  - ask_ingredients
+  - ask_full_recipe
+
+entities:
+  - diet
+  - ingredient
+
+actions:
+  - action_extract_dietary_restriction
+  - action_search_by_diet
+  - action_recipe_details_diet  
+  - action_extract_ingredients
+  - action_search_by_ingredients
+  - action_show_another_recipe
+  - action_ask_enough
+  - action_provide_moussaka_recipe
+  - action_create_moussaka_shopping_list
+
+slots:
+  diet_restriction:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: diet
+
+  selected_recipe:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  ingredient:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: ingredient
+
+  available_recipes:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+
+responses:
+  
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_greet_with_options:
+  - text: "Hi! I'm Pepito, your personal cooking assistant! You can ask me for recipes based on your available ingredients or dietary preferences.I also know the recipe for a perfect Moussaka! How would you like to proceed?"
+
+  utter_goodbye:
+  - text: "Got it! Let me know if you need anything else. Happy cooking!"
+ 
+  utter_thanks:
+  - text: "Happy I could help! Happy cooking!"
+
+  utter_ask_more_info:
+  - text: "Would you like more info about preparation and cooking time?"
+
+  utter_acknowledge_search_type_dietary:
+  - text: "Got it! Let's find recipes based on your dietary restrictions! What type of diet do you follow?"
+
+  utter_acknowledge_search_type_ingredients:
+  - text: "Got it! Let's find recipes based on your main ingredient! What ingredient do you want to use?"
+
+  utter_ask_enough:
+  - text: "Are these recipes enough or do you need more?"
+
+  utter_ask_choice:
+  - text: "Would you like to see the full recipe or just the ingredients?"
+ 
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
