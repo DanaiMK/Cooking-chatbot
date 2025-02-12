@@ -115,8 +115,8 @@ This project requires API keys to access external data sources (the Spoonacular 
    - In the root directory of the project, create a file named `.env`.
    - Add the following lines to the file, replacing the placeholder with your actual API key:
      ```env
-     RECIPE_API_KEY=your_recipe_api_key
-     NUTRITION_API_KEY=your_nutrition_api_key
+     API_KEY=your_recipe_api_key
+    
      ```
 3. **Ensure the `.env` File is Not Tracked:**
    - Make sure that the `.env` file is added to your `.gitignore` file so that your keys are not exposed in the repository.
