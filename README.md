@@ -19,7 +19,7 @@ The chatbot integrates with the Spoonacular API to fetch real-time recipe data b
 
 # Dialog Policy Experimentation
 
-During the development of Pepito, we conducted several experiments to improve the dialog policy. Below are the details of the changes we made, the rationale behind these modifications, and the observed results and insights:
+During the development of Pepito, we conducted several experiments to improve the dialogue policy. Below are the details of the changes we made, the rationale behind these modifications, and the observed results and insights:
 
 
 # The Changes Made
